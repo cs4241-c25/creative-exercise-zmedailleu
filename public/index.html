@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/main.js"></script>
+    <title>Polygon Demonstration</title>
+</head>
+<body style="background-color:#98f5af">
+<h1>Check out these awesome polygons!</h1>
+<h2>First polygon :D</h2>
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+    <rect width="50" height="200" x="20" y="40" fill="pink" stroke-width="4" stroke="teal"/>
+</svg>
+<h2>Second polygon :D</h2>
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="50,20 100,10 200,20 150,250, 50,125" fill="#FF128F" />
+</svg>
+<h2>This one has a gradient :o</h2>
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="coolGradient">
+            <stop class="firstColor" offset="0%" />
+            <stop class="secondColor" offset="33%" />
+            <stop class="thirdColor" offset="67%" />
+            <stop class="fourthColor" offset="100%" />
+        </linearGradient>
+    </defs>
+    <style>
+        .firstColor {
+            stop-color: #EEB8C4;
+        }
+        .secondColor {
+            stop-color: #4061A0;
+        }
+        .thirdColor {
+            stop-color: #E6D47B;
+        }
+        .fourthColor {
+            stop-color: #D0574E;
+        }
+    </style>
+    <polygon points="20,10 30,60 140,140 260,10, 270,80 220,188 100,188 10,95" fill="url(#coolGradient)" />
+</svg>
+<h2>Change this one using the button</h2>
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+    <circle id="sizePolygon" cx="150" cy="150" r="20" fill="#0BE00F" stroke="#59316E" stroke-width="3"/>
+</svg>
+<input type="button" value="Change the Polygon" onclick="changePolygonSize()" />
+<h2>This polygon moves</h2>
+<svg width="1600" height="300" xmlns="http://www.w3.org/2000/svg">
+    <rect width="150" height="250" x="10" y="10" fill="#65C4E0">
+    <animate attributeName="x" begin="0s" dur="5s" from="10" to="1300" repeatCount="indefinite" />
+    </rect>
+</svg>
+</body>
+</html>
