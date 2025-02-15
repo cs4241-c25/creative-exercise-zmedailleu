@@ -1,4 +1,3 @@
-
 function changePolygonSize() {
     var polygon = document.getElementById("sizePolygon");
     var currentRadius = polygon.getAttribute("r");
